@@ -19,7 +19,7 @@ class ProductoController {
             $precio_unitario = $_POST['precio_unitario'] ?? 0.0;
             
             if ($this->model->registrarProducto($nombre, $cantidad, $precio_unitario)) {
-                header('Location: index.php?action=listar');
+                header('Location: index.php');
                 exit;
             } else {
                 $error = "Error al registrar el producto";
